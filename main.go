@@ -78,8 +78,8 @@ func drawStdout(svc chan bool, ps chan spotify.PlaybackStatus, metadata chan *sp
 		select {
 		case running = <-svc:
 			if !running {
+				fmt.Println("")
 				time.Sleep(2 * time.Second)
-				continue
 			}
 		case cp := <-ps:
 			if cp == "Playing" {
