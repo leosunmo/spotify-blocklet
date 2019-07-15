@@ -6,8 +6,8 @@ Displays current Artist - Song. No short text form implemented yet.
 Yellow if paused.
 
 Mouse events:
-Left click - Play/Pause
-Right click - Next
+Left click - Play/Pause  
+Right click - Next  
 Middle click - Previous
 
 These are easy to modify in `main.go`.
