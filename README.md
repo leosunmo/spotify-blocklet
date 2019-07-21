@@ -1,9 +1,13 @@
 # spotify-blocklet
 
-![Spotify-blocklet](/assets/screenshot.png?raw=true "Spotify-blocket")
-
 Displays current Artist - Song. No short text form implemented yet.
 Yellow if paused.
+
+Playing:
+![Spotify-blocklet playing](/assets/playing.png?raw=true "Spotify-blocket playing")
+
+Paused:
+![Spotify-blocklet paused](/assets/paused.png?raw=true "Spotify-blocket paused")
 
 Mouse events:  
 Left click - Play/Pause  
@@ -12,7 +16,7 @@ Middle click - Previous
 
 These are easy to modify in `main.go`.
 
-Spotify-blocklet listens to dbus events so should be ran as a daemon in i3blocks (`interval=persist`).
+Spotify-blocklet listens to dbus events so should be run as a daemon in i3blocks (`interval=persist`).
 
 ## Example config
 i3blocks.conf
