@@ -89,8 +89,8 @@ func drawStdout(svc chan bool, ps chan spotify.PlaybackStatus, metadata chan *sp
 				playing = false
 			}
 		case meta := <-metadata:
-			artist = strings.Join(meta.Artist, ", ")
-			song = meta.Title
+			artist = sanitizePango(strings.Join(meta.Artist, ", "))
+			song = sanitizePango(meta.Title)
 		}
 		time.Sleep(1)
 		if !playing {
@@ -99,4 +99,15 @@ func drawStdout(svc chan bool, ps chan spotify.PlaybackStatus, metadata chan *sp
 			fmt.Printf("<small>%s - %s</small>\n", artist, song)
 		}
 	}
+}
+
+// sanitizePango makes sure we escape special Pango characters
+func sanitizePango(text string) string {
+	r := strings.NewReplacer(
+		"&", "&amp;",
+		">", "&gt;",
+		"<", "&lt;")
+	sanitizedText := r.Replace(text)
+
+	return sanitizedText
 }
