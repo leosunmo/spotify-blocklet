@@ -2,3 +2,5 @@ github.com/godbus/dbus v4.1.0+incompatible h1:WqqLRTsQic3apZUK9qC5sGNfXthmPXzUZ7
 github.com/godbus/dbus v4.1.0+incompatible/go.mod h1:/YcGZj5zSblfDWMMoOzV4fas9FZnQYTkDnsGvmh2Grw=
 github.com/leosunmo/go-spotify-dbus v0.0.0-20190628100657-caefa158a10a h1:4GesBqp7hDRsVuTSSL/mnu953EDa2U3fZW9bzGhH1FQ=
 github.com/leosunmo/go-spotify-dbus v0.0.0-20190628100657-caefa158a10a/go.mod h1:IAyCDAjGsWo6e48B6Wkrj9/xr+yVykDfwE+Sx6D/S2Y=
+github.com/sqp/pulseaudio v0.0.0-20180916175200-29ac6bfa231c h1:GtYMHdPBniUh0I+RZ563TsL6ZlvCbaO7jbEOsDDB7EI=
+github.com/sqp/pulseaudio v0.0.0-20180916175200-29ac6bfa231c/go.mod h1:RH1uOz6XaP849IvlvocEoBsW/SMmxRTzEd7olkyO2zI=
