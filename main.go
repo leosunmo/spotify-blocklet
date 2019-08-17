@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/dawidd6/go-spotify-dbus"
 	"github.com/godbus/dbus"
-	"github.com/leosunmo/go-spotify-dbus"
 )
 
 const (

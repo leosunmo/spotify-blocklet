@@ -1,4 +1,4 @@
+github.com/dawidd6/go-spotify-dbus v0.1.1 h1:sdiI7bAgluW5DvOoSUQFTbivFimyQ6vB2jMnT9UxkTQ=
+github.com/dawidd6/go-spotify-dbus v0.1.1/go.mod h1:u8B2rzlEPl7o6e5P9hb48q3Bp2vS9mVOVbDGrgwmQU8=
 github.com/godbus/dbus v4.1.0+incompatible h1:WqqLRTsQic3apZUK9qC5sGNfXthmPXzUZ7nQPrNITa4=
 github.com/godbus/dbus v4.1.0+incompatible/go.mod h1:/YcGZj5zSblfDWMMoOzV4fas9FZnQYTkDnsGvmh2Grw=
-github.com/leosunmo/go-spotify-dbus v0.0.0-20190628100657-caefa158a10a h1:4GesBqp7hDRsVuTSSL/mnu953EDa2U3fZW9bzGhH1FQ=
-github.com/leosunmo/go-spotify-dbus v0.0.0-20190628100657-caefa158a10a/go.mod h1:IAyCDAjGsWo6e48B6Wkrj9/xr+yVykDfwE+Sx6D/S2Y=
