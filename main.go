@@ -29,6 +29,7 @@ func main() {
 	chanMeta := make(chan *spotify.Metadata)
 	chanPs := make(chan spotify.PlaybackStatus)
 	chanSvc := make(chan bool)
+	errors := make(chan error, 5)
 
 	listeners := &spotify.Listeners{
 		OnMetadata: func(metadata *spotify.Metadata) {
@@ -47,8 +48,16 @@ func main() {
 		},
 	}
 
+	// Print errors in background
+	go func() {
+		for {
+			err := <-errors
+			log.Println("error:", err)
+		}
+	}()
+
 	// Start listening to the dbus
-	go spotify.Listen(conn, listeners)
+	go spotify.Listen(conn, errors, listeners)
 
 	// Start stdout drawing
 	go drawStdout(chanSvc, chanPs, chanMeta)
@@ -96,7 +105,7 @@ func drawStdout(svc chan bool, ps chan spotify.PlaybackStatus, metadata chan *sp
 		if !playing {
 			fmt.Printf("<span foreground=\"#cccc00\" size=\"smaller\">%s - %s</span>\n", artist, song)
 		} else {
-			fmt.Printf("<small>%s - %s</small>\n", artist, song)
+			fmt.Printf("<span size=\"smaller\">%s - %s</span>\n", artist, song)
 		}
 	}
 }
